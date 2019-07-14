@@ -382,6 +382,12 @@ pageClass: routes
 
 <Route author="xyqfer" example="/twitter/likes/DIYgod" path="/twitter/likes/:id" :paramsDesc="['用户 twitter 名']"/>
 
+## VueVlog
+
+### 用户
+
+<Route author="kt286" example="/vuevideo/971924215514" path="/vuevideo/:userid" :paramsDesc="['用户ID, 可在对应页面的 URL 中找到']"/>
+
 ## Youtube
 
 ### 用户
@@ -401,6 +407,12 @@ pageClass: routes
 ### 用户动态
 
 <Route author="LogicJake" example="/bihu/activaties/1478342200" path="/bihu/activaties/:id" :paramsDesc="['用户 id']"/>
+
+## 唱吧
+
+### 用户
+
+<Route author="kt286" example="/changba/34108440" path="/changba/:userid" :paramsDesc="['用户ID, 可在对应页面的 URL 中找到']" supportPodcast="1"/>
 
 ## 豆瓣
 
@@ -520,17 +532,15 @@ pageClass: routes
 
 ## 好奇心日报
 
-### 分类
+### 标签，栏目，分类
 
-<Route author="WenhuWee" example="/qdaily/category/5" path="/qdaily/category/:id" :paramsDesc="['分类 id，可在分类 URL 找到']"/>
+<Route author="WenhuWee emdoe SivaGao HenryQW" example="/qdaily/column/59" path="/qdaily/:type/:id" :paramsDesc="['类型，见下表', '对应 id，可在 URL 找到']">
 
-### 栏目
+| 标签 | 栏目   | 分类       |
+| ---- | ------ | ---------- |
+| tag  | column | researcach |
 
-<Route author="WenhuWee emdoe" example="/qdaily/column/59" path="/qdaily/column/:id" :paramsDesc="['栏目 id，可在栏目 URL 找到']"/>
-
-### 标签
-
-<Route author="SivaGao" example="/qdaily/tag/29" path="/qdaily/tag/:id" :paramsDesc="['标签 id，可在 tag URL 找到']"/>
+</Route>
 
 ## 虎扑
 
@@ -624,7 +634,7 @@ pageClass: routes
 
 ### 博主
 
-<Route author="DIYgod" example="/weibo/user/1195230310" path="/weibo/user/:uid" :paramsDesc="['用户 id, 博主主页打开控制台执行 `$CONFIG.oid` 获取']" crawlerBadge="1"/>
+<Route author="DIYgod iplusx" example="/weibo/user/1195230310" path="/weibo/user/:uid/:displayVideo?" :paramsDesc="['用户 id, 博主主页打开控制台执行 `$CONFIG.oid` 获取', '是否直接显示微博视频, 缺省 `0` 不显示, 若需要显示则填 `1` ']" crawlerBadge="1"/>
 
 ### 关键词
 
@@ -668,6 +678,10 @@ pageClass: routes
 :::
 </Route>
 
+### 公众号 (优读来源)
+
+<Route author="kt286" example="/wechat/uread/shensing" path="/wechat/uread/:userid" :paramsDesc="['公众号的微信号, 可在 微信-公众号-更多资料 中找到。并不是所有的都支持，能不能用随缘']"/>
+
 ### 公众平台系统公告栏目
 
 <Route author="xyqfer" example="/wechat/announce" path="/wechat/announce" />
@@ -699,6 +713,10 @@ pageClass: routes
 ### 基金净值更新
 
 <Route author="HenryQW" example="/xueqiu/fund/040008" path="/xueqiu/fund/:id" :paramsDesc="['基金代码, 可在基金主页 URL 中找到. 此路由的数据为场外基金 (`F`开头)']"/>
+
+### 组合最新调仓信息
+
+<Route author="ZhishanZhang" example="/xueqiu/p/ZH1288184" path="/xueqiu/snb/:id" :paramsDesc="['组合代码, 可在组合主页 URL 中找到.']"/>
 
 ### 股票信息
 

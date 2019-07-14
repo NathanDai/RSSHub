@@ -172,6 +172,36 @@ GitHub 官方也提供了一些 RSS:
 
 <Route author="ysc3839" example="/patchwork.kernel.org/comments/10723629" path="/patchwork.kernel.org/comments/:id" :paramsDesc="['Patch ID']"/>
 
+## LWN.net
+
+### Security alerts
+
+<Route author="zengxs" example="/lwn/alerts/CentOS" path="/lwn/alerts/:distributor" :paramsDesc="['对应发行版标识']">
+
+| 发行版           | 标识               |
+| :--------------- | :----------------- |
+| Arch Linux       | `Arch_Linux`       |
+| CentOS           | `CentOS`           |
+| Debian           | `Debian`           |
+| Fedora           | `Fedora`           |
+| Gentoo           | `Gentoo`           |
+| Mageia           | `Mageia`           |
+| openSUSE         | `openSUSE`         |
+| Oracle           | `Oracle`           |
+| Red Hat          | `Red_Hat`          |
+| Scientific Linux | `Scientific_Linux` |
+| Slackware        | `Slackware`        |
+| SUSE             | `SUSE`             |
+| Ubuntu           | `Ubuntu`           |
+
+::: tip 提示
+
+注意标识大小写
+
+:::
+
+</Route>
+
 ## segmentfault
 
 ### 频道
@@ -337,6 +367,7 @@ GitHub 官方也提供了一些 RSS:
 | xxiaobian |
 
 </Route>
+
 ### 数字型账号用户博客
 
 <Route author="dxmpalb" example="/oschina/u/3920392" path="/oschina/u/:id" :paramsDesc="['用户 id, 可通过查看用户博客网址得到，以 u/数字结尾，数字即为 id']">
@@ -346,6 +377,10 @@ GitHub 官方也提供了一些 RSS:
 | 3920392        |
 
 </Route>
+
+### 问答主题
+
+<Route author="loveely7" example="/oschina/topic/weekly-news" path="/oschina/topic/:topic" :paramsDesc="['主题名, 可从[全部主题](https://www.oschina.net/question/topics)进入主题页, 在 URL 中找到']"/>
 
 ## 看雪
 
@@ -403,6 +438,12 @@ GitHub 官方也提供了一些 RSS:
 | hot  | plan | program | tech     | audio | project  | yunying  | test     |
 
 </Route>
+
+## 印记中文周刊
+
+### 最新一期
+
+<Route author="daijinru" example="/docschina/jsweekly" path="/docschina/jsweekly"/>
 
 ## 知晓程序
 

@@ -207,6 +207,12 @@ pageClass: routes
 | -------- | -------- | -------- | -------- | -------- |
 | xyxw     | tzgg     | jwxx     | jyxx     | xgsw     |
 
+## 广东工业大学
+
+### 校内新闻网
+
+<Route author="Jiangming1399" example="/gdut/news" path="/gdut/news"/>
+
 ## 广东海洋大学
 
 ### 广东海洋大学
@@ -896,6 +902,18 @@ https://rsshub.app/**nuist**/`bulletin` 或 https://rsshub.app/**nuist**/`bullet
 | 首页 | 教务处 | 研究生院 |
 | ---- | ------ | -------- |
 | home | jwc    | yjsy     |
+
+</Route>
+
+## 中南大学
+
+### 招聘信息
+
+<Route author="csuhan" example="/csu/job" path="/universities/csu/job/:type?" :paramsDesc="['招聘类型']">
+
+| 招聘类型 | 本部招聘 | 湘雅招聘 | 铁道招聘 | 在线招聘 | 事业招考 |
+| -------- | -------- | -------- | -------- | -------- | -------- |
+| 参数     | 1        | 2        | 3        | 4        | 5        |
 
 </Route>
 
