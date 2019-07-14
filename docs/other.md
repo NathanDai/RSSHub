@@ -4,17 +4,11 @@ pageClass: routes
 
 # 其他
 
-## 12306
-
-### 最新动态
-
-<Route author="LogicJake" example="/12306/zxdt" path="/12306/zxdt/:id?" :paramsDesc="['铁路局id，可在 URL 中找到，不填默认显示所有铁路局动态']"/>
-
 ## 36kr
 
 ### 搜索文章
 
-<Route author="xyqfer" example="/36kr/search/article/8%E7%82%B91%E6%B0%AA" path="/36kr/search/article/:keyword" :paramsDesc="['关键字']" />
+<Route author="xyqfer kt286" example="/36kr/search/article/ofo" path="/36kr/search/article/:keyword" :paramsDesc="['关键字']" />
 
 ## 99% Invisible
 
@@ -44,6 +38,12 @@ pageClass: routes
 ### App Store/Mac App Store
 
 见 [#app-store-mac-app-store](/program-update.html#app-store-mac-app-store)
+
+## archdaily
+
+### 首页
+
+<Route author="kt286" example="/archdaily" path="/archdaily"/>
 
 ## AutoTrader
 
@@ -96,6 +96,14 @@ pageClass: routes
 
 1. 简单模式, 例如「data visualization」, <https://rsshub.app/google/scholar/data+visualization>.
 2. 高级模式, 前往 [Google Scholar](https://scholar.google.com/schhp?hl=zh-cn&as_sdt=0,5), 点击左上角, 选择高级搜索并提交查询. 此时 URL 应为: <https://scholar.google.com/scholar?as_q=data+visualization&as_epq=&as_oq=&as_eq=&as_occt=any&as_sauthors=&as_publication=&as_ylo=2018&as_yhi=&hl=zh-CN&as_sdt=0%2C5>, 复制`https://scholar.google.com/scholar?`后的所有语句作为本路由的查询参数. 例子所对应的完整路由为<https://rsshub.app/google/scholar/as_q=data+visualization&as_epq=&as_oq=&as_eq=&as_occt=any&as_sauthors=&as_publication=&as_ylo=2018&as_yhi=&hl=zh-CN&as_sdt=0%2C5>.
+
+</Route>
+
+### 谷歌学术作者引用更新
+
+<Route author="KellyHwong" example="/google/citations/mlmE4JMAAAAJ" path="/google/citations/:id" crawlerBadge="1">
+
+路由中的参数 id，即用户谷歌学术引用页面 url 中的 id，如 https://scholar.google.com/citations?hl=zh-CN&user=mlmE4JMAAAAJ 中 user= 后的 mlmE4JMAAAAJ。
 
 </Route>
 
@@ -171,6 +179,12 @@ pageClass: routes
 
 <Route author="brilon" example="/mobdata/report" path="/mobdata/report"/>
 
+## NBA
+
+### 头条新闻
+
+<Route author="alizeegod" example="/nba/app_news" path="/nba/app_news"/>
+
 ## ONE · 一个
 
 ### 图片文字问答
@@ -204,6 +218,12 @@ pageClass: routes
 通过提取文章全文, 以提供比官方源更佳的阅读体验.
 
 </Route>
+
+## TOPYS
+
+### 分类
+
+<Route author="kt286" example="/topys/7" path="/topys/:category" :paramsDesc="['分类ID，可在对应页面的 URL 中找到']"/>
 
 ## TSSstatus（iOS 降级通道）
 
@@ -249,6 +269,10 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### source
 
 <Route author="LogicJake" example="/zaker/source/12291" path="/zaker/source/:id" :paramsDesc="['source id，可在 URL 中找到']"/>
+
+### channel
+
+<Route author="kt286" example="/zaker/channel/13" path="/zaker/source/:id" :paramsDesc="['channel id，可在 URL 中找到']"/>
 
 ## 爱范儿 ifanr
 
@@ -798,6 +822,20 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 吐槽新帖
 
 <Route author="Qixingchen" example="/tucaoqq/post/28564/CdRI0728" path="/tucaoqq/post/:project/:key" :paramsDesc="['产品 ID', '产品密钥']"/>
+
+## 天津产权交易中心
+
+### 产权转让
+
+<Route author="kt286" example="/tprtc/cqzr" path="/tprtc/cqzr"/>
+
+### 企业资产转让
+
+<Route author="kt286" example="/tprtc/qyzc" path="/tprtc/qyzc"/>
+
+### 新闻动态
+
+<Route author="kt286" example="/tprtc/news" path="/tprtc/news"/>
 
 ## 推酷
 
