@@ -167,6 +167,40 @@ pageClass: routes
 
 </Route>
 
+### 计算机科学与工程学院
+
+<Route author="talengu" example="/uestc/cs/ztlj*xskb" path="/universities/uestc/cs/:type?" :paramsDesc="['默认为 `ztlj*xskb`']">
+
+| 学院新闻   | 学生科    | 教务科    | 研管科    | 学术看板   |
+| ---------- | --------- | --------- | --------- | ---------- |
+| xwzx\*xyxw | tzgg\*xsk | tzgg\*jwk | tzgg\*ygk | ztlj\*xskb |
+
+注 1: xwzx\*xyxw 对应 http://www.scse.uestc.edu.cn/xwzx/xyxw.htm ;
+tzgg\*xsk 对应 http://www.scse.uestc.edu.cn/tzgg/xsk.htm
+
+可自定义设置
+
+注 2; 用+号来叠加 学生科+教务科 `/uestc/cs/ztlj*xskb+tzgg*jwk`
+
+</Route>
+
+### 自动化工程学院
+
+<Route author="talengu" example="/uestc/auto/tzgg1" path="/universities/uestc/news/:type?" :paramsDesc="['默认为 `tzgg1`']">
+
+| 通知公告 | 学术看板 | 焦点新闻 | 综合新闻 |
+| -------- | -------- | -------- | -------- |
+| tzgg1    | xskb1    | jdxw     | zhxw1    |
+
+注 1: tzgg1 对应 http://www.auto.uestc.edu.cn/index/tzgg1.htm ;
+xskb1 对应 http://www.auto.uestc.edu.cn/index/xskb1.htm
+
+可自定义设置
+
+注 2: 用+号来叠加，通知公告+学术看板 `/uestc/auto/tzgg1+xskb1`
+
+</Route>
+
 ## 东莞理工学院
 
 ### 教务处通知
@@ -312,7 +346,7 @@ category 列表：
 
 ### 教务处新闻动态
 
-<Route author="KeNorizon" example="/scut/jwc/1" path="/scut/jwc/:category?" :paramsDesc="['新闻动态分类, 可选, 默认为 `1`']">
+<Route author="KeNorizon" example="/scut/jwc/1" path="/scut/jwc/:category?" :paramsDesc="['新闻动态分类, 默认为 `1`']">
 
 | 教务通知 | 交流交换 | 新闻动态 | 媒体关注 | 学院通知 |
 | -------- | -------- | -------- | -------- | -------- |
@@ -403,6 +437,12 @@ category 列表：
 | notice   | news     |
 
 </Route>
+
+## 南京工业大学
+
+### 南京工业大学教务处
+
+<Route author="TrumanGu" example="/njtech/jwc" path="/njtech/jwc" />
 
 ## 南京航空航天大学
 
@@ -726,6 +766,12 @@ https://rsshub.app/**nuist**/`bulletin` 或 https://rsshub.app/**nuist**/`bullet
 
 </Route>
 
+## 四川大学
+
+### 教务处通知公告
+
+<Route author="KXXH" example="/scu/jwc/notice" path="/scu/jwc/notice" />
+
 ## 四川旅游学院
 
 ### 信息与工程学院动态公告列表
@@ -922,6 +968,10 @@ https://rsshub.app/**nuist**/`bulletin` 或 https://rsshub.app/**nuist**/`bullet
 ### 教务网通知公告
 
 <Route author="El-Chiang" example="/cqu/jwc/announcement" path="/universities/cqu/jwc/announcement"/>
+
+### 新闻网讲座预告
+
+<Route author="nicolaszf" example="/cqu/news/jzyg" path="/universities/cqu/news/jzyg"/>
 
 ## 重庆科技学院
 

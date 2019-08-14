@@ -11,19 +11,17 @@
 
 ## 介绍
 
-RSSHub 是一个轻量、易于扩展的 RSS 生成器，可以给任何奇奇怪怪的内容生成 RSS 订阅源
+RSSHub 是一个轻量、易于扩展的 RSS 生成器，可以给任何奇奇怪怪的内容生成 RSS 订阅源，配合浏览器扩展 [RSSHub Radar](https://github.com/DIYgod/RSSHub-Radar) 食用效果更佳哟
 
-[Telegram 群](https://t.me/rsshub)
+[Telegram 群](https://t.me/rsshub) | [Telegram 频道](https://t.me/awesomeRSSHub)
 
-[使用文档](https://docs.rsshub.app/)
-
-[English docs](https://docs.rsshub.app/en)
+[使用文档](https://docs.rsshub.app/) | [English docs](https://docs.rsshub.app/en)
 
 ## 鸣谢
 
 ### Special Sponsors
 
-<a href="https://rixcloud.app/rsshub" target="_blank"><img height="60px" src="https://i.imgur.com/TrgP3S1.png"></a>&nbsp;&nbsp;&nbsp;<a href="https://partner.lizhi.io/rsshub/office_365_share" target="_blank"><img height="60px" src="https://i.imgur.com/GyYi9MI.png"></a>
+<a href="https://rixcloud.app/rsshub" target="_blank"><img height="60px" src="https://i.imgur.com/TrgP3S1.png"></a>&nbsp;&nbsp;&nbsp;<a href="https://apps.apple.com/cn/app/%E5%BF%AB%E7%9F%A5-%E8%AE%A9%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96%E6%9B%B4%E9%AB%98%E6%95%88/id1465578855" target="_blank"><img height="60px" src="https://i.imgur.com/YjqwaKE.png"></a>&nbsp;&nbsp;&nbsp;<a href="https://partner.lizhi.io/rsshub/office_365_share" target="_blank"><img height="60px" src="https://i.imgur.com/GyYi9MI.png"></a>
 
 ### Sponsors
 
@@ -78,6 +76,8 @@ RSSHub 是采用 MIT 许可的开源项目，使用完全免费。 但是随着�
 -   [支付宝](https://i.loli.net/2019/03/23/5c950ebbc980e.png)
 
 ## 相关项目
+
+-   [RSSHub Radar](https://github.com/DIYgod/RSSHub-Radar): 探测当前页面可用的 RSS 和 RSSHub 的浏览器扩展
 
 -   [Easy to RSS](https://github.com/idealclover/Easy-to-RSS): 一个一键式发现当前网页 RSS 的 chrome 扩展，与 RSSHub 联动支持更多网页
 
