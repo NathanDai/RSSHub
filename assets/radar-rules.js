@@ -5,18 +5,7 @@
             {
                 title: '分区视频',
                 docs: 'https://docs.rsshub.app/social-media.html#bilibili',
-                source: '/v/*tpath',
-                target: (params) => {
-                    let tid;
-                    switch (params.tpath) {
-                        case 'douga/mad':
-                            tid = '24';
-                            break;
-                        default:
-                            return false;
-                    }
-                    return `/bilibili/partion/${tid}`;
-                },
+                source: ['/v/*tpath', '/documentary', '/movie', '/tv'],
             },
             {
                 title: '视频评论',
@@ -52,6 +41,16 @@
     'weibo.com': {
         _name: '微博',
         '.': [
+            {
+                title: '博主',
+                docs: 'https://docs.rsshub.app/social-media.html#%E5%BE%AE%E5%8D%9A',
+                source: ['/u/:id', '/:id'],
+                target: '/weibo/user/:uid',
+                script: "({uid: document.querySelector('head').innerHTML.match(/\\$CONFIG\\['oid']='(\\d+)'/)[1]})",
+                verification: (params) => params.uid,
+            },
+        ],
+        www: [
             {
                 title: '博主',
                 docs: 'https://docs.rsshub.app/social-media.html#%E5%BE%AE%E5%8D%9A',
@@ -197,6 +196,12 @@
                 docs: 'https://docs.rsshub.app/programming.html#github',
                 source: '/:user/:repo/blob/:branch/*filepath',
                 target: '/github/file/:user/:repo/:branch/:filepath',
+            },
+            {
+                title: '用户 Starred Repositories',
+                docs: 'https://docs.rsshub.app/programming.html#github',
+                source: '/:user',
+                target: '/github/starred_repos/:user',
             },
         ],
     },
@@ -347,6 +352,71 @@
             {
                 title: '瞬间更新',
                 docs: 'https://docs.rsshub.app/social-media.html#soul',
+            },
+        ],
+    },
+    'juejin.im': {
+        _name: '掘金',
+        '.': [
+            {
+                title: '专栏',
+                docs: 'https://docs.rsshub.app/programming.html#%E6%8E%98%E9%87%91',
+                source: '/user/:id/posts',
+                target: '/juejin/posts/:id',
+            },
+        ],
+    },
+    'anime1.me': {
+        _name: 'Anime1',
+        '.': [
+            {
+                title: '動畫',
+                docs: 'https://docs.rsshub.app/anime.html#anime1',
+                source: '/category/:time/:name',
+                target: '/anime1/anime/:time/:name',
+            },
+            {
+                title: '搜尋',
+                docs: 'https://docs.rsshub.app/anime.html#anime1',
+                source: '/',
+                script: "({keyword: new URLSearchParams(location.search).get('s')})",
+                target: '/anime1/search/:keyword',
+                verification: (params) => params.keyword,
+            },
+        ],
+    },
+    'instagram.com': {
+        _name: 'Instagram',
+        www: [
+            {
+                title: '用户',
+                docs: 'https://docs.rsshub.app/social-media.html#instagram',
+                source: '/:id',
+                target: '/instagram/user/:id',
+                verification: (params) => params.id !== 'explore' && params.id !== 'developer',
+            },
+            {
+                title: '标签',
+                docs: 'https://docs.rsshub.app/social-media.html#instagram',
+                source: '/explore/tags/:tag',
+                target: '/instagram/tag/:tag',
+            },
+        ],
+    },
+    'swufe.edu.cn': {
+        _name: '西南财经大学',
+        it: [
+            {
+                title: '经济信息工程学院 - 通知公告',
+                docs: 'https://docs.rsshub.app/university.html#%E7%BB%8F%E6%B5%8E%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2',
+                source: '/index/tzgg.htm',
+                target: '/universities/swufe/seie/tzgg',
+            },
+            {
+                title: '经济信息工程学院 - 学院新闻',
+                docs: 'https://docs.rsshub.app/university.html#%E7%BB%8F%E6%B5%8E%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2',
+                source: '/index/xyxw.htm',
+                target: '/universities/swufe/seie/xyxw',
             },
         ],
     },
