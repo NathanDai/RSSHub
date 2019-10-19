@@ -225,6 +225,26 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="junfengP" example="/mlhang" path="/mlhang" />
 
+## 米坛社区
+
+### 表盘更新
+
+<Route author="hoilc" example="/watchface/mi4/" path="/watchface/:watch_type?/:list_type?" :paramsDesc="['手环型号, 默认为`小米手环4`', '列表类型, 默认为`最新上传`']">
+
+表盘型号
+
+| 小米手环 4 | 华米 GTR 47mm | 华米智能手表青春版 |
+| ---------- | ------------- | ------------------ |
+| mi4        | gtr47         | gvlite             |
+
+列表类型
+
+| 最新上传 | 最多下载 | 编辑推荐   |
+| -------- | -------- | ---------- |
+| 0        | 1        | recommends |
+
+</Route>
+
 ## 且听风吟福利
 
 ### 分类
@@ -269,6 +289,16 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="kt286" example="/sse/convert/beginDate=2018-08-18&endDate=2019-08-18&companyCode=603283&title=股份" path="/sse/convert/:query?" :paramsDesc="['筛选条件，见示例']"/>
 
+### 科创板项目动态
+
+<Route author="Jeason0228" example="/sse/renewal" path="/sse/renewal"/>
+
+## 深圳证券交易所
+
+### 上市公告-可转换债券
+
+<Route author="Jeason0228" example="/szse/notice" path="/szse/notice"/>
+
 ## 搜狗
 
 ### 搜狗特色 LOGO
@@ -290,6 +320,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 吐槽新帖
 
 <Route author="Qixingchen" example="/tucaoqq/post/28564/CdRI0728" path="/tucaoqq/post/:project/:key" :paramsDesc="['产品 ID', '产品密钥']"/>
+
+## 腾讯新闻较真查证平台
+
+### 最新辟谣
+
+<Route author="hoilc" example="/factcheck" path="/factcheck"/>
 
 ## 天津产权交易中心
 
@@ -360,3 +396,9 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 房源
 
 <Route author="DIYgod" example="/ziroom/room/sh/1/2/五角场" path="/ziroom/room/:city/:iswhole/:room/:keyword" :paramsDesc="['城市, 北京 bj; 上海 sh; 深圳 sz; 杭州 hz; 南京 nj; 广州 gz; 成都 cd; 武汉 wh; 天津 tj', '是否整租', '房间数', '关键词']"/>
+
+## はてな
+
+### はてな匿名ダイアリー - 人気記事アーカイブ
+
+<Route author="masakichi" example="/hatena/anonymous_diary/archive" path="/hatena/anonymous_diary/archive"/>
