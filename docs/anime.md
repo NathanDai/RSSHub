@@ -9,6 +9,13 @@ pageClass: routes
 ### 二次元资讯
 
 <Route author="junfengP" example="/005tv/zx/latest" path="/005tv/zx/latest"/>
+
+## 1draw #深夜の真剣お絵描き 60 分一本勝負
+
+### 投稿一览
+
+<Route author="jackyu1996" path="/1draw/" example="/1draw/" />
+
 ## Anime1
 
 ### 動畫
@@ -79,6 +86,23 @@ pageClass: routes
 
 见 [#bilibili](/social-media.html#bilibili)
 
+## DLsite
+
+### 当前日期发售的新产品
+
+<Route author="cssxsh" example="/dlsite/new/home" path="/dlsite/new/:type" :paramsDesc="['类型，如下表']">
+
+| 同人 | 漫画  | 软件 | 同人(R18) | 漫画(R18) | 美少女游戏 | 乙女  | BL  |
+| ---- | ----- | ---- | --------- | --------- | ---------- | ----- | --- |
+| home | comic | soft | maniax    | books     | pro        | girls | bl  |
+
+</Route>
+
+### 产品打折信息
+
+<Route author="cssxsh" example="/dlsite/campaign/home" path="/dlsite/campaign/:type/:free?" :paramsDesc="['类型，同上表', '只看免费，任意值开启，为空关闭']">
+</Route>
+
 ## ebb.io
 
 ### ebb
@@ -125,11 +149,11 @@ pageClass: routes
 
 ### vol
 
-<Route author="CoderTonyChan" example="/vol/finsh" path="/vol/:mode?" :paramsDesc="['模式']">
+<Route author="CoderTonyChan" example="/vol/finish" path="/vol/:mode?" :paramsDesc="['模式']">
 
-| 连载   | 完结  |
-| ------ | ----- |
-| serial | finsh |
+| 连载   | 完结   |
+| ------ | ------ |
+| serial | finish |
 
 </Route>
 

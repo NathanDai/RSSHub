@@ -165,6 +165,17 @@ GitHub 官方也提供了一些 RSS:
 | Hotness | Recent Comments | Recently Posted | Most Votes | Most Comments |
 
 </Route>
+
+### Competitions
+
+<Route author="LogicJake" example="/kaggle/competitions" path="/kaggle/competitions/:category?" :paramsDesc="['类别, 默认为空']">
+
+| 空             | featured | research | recruitment | gettingStarted  | masters | playground | analytics |
+| -------------- | -------- | -------- | ----------- | --------------- | ------- | ---------- | --------- |
+| All Categories | Featured | Research | Recruitment | Getting started | Masters | Playground | Analytics |
+
+</Route>
+
 ## LeetCode
 
 ### 文章
@@ -470,6 +481,12 @@ GitHub 官方也提供了一些 RSS:
 | nodejs     | nodejs     |
 
 </Route>
+
+## 码农周刊
+
+### issues
+
+<Route author="tonghs" example="/manong-weekly" path="/manong-weekly" />
 
 ## 前端艺术家&&飞冰早报
 
