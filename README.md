@@ -103,3 +103,36 @@ RSSHub 是采用 MIT 许可的开源项目，使用完全免费。 但是随着�
 Authored and maintained by DIYgod with help from contributors ([list](https://github.com/DIYgod/RSSHub/contributors)).
 
 > Blog [@DIYgod](https://diygod.me) · GitHub [@DIYgod](https://github.com/DIYgod) · Twitter [@DIYgod](https://twitter.com/DIYgod) · Telegram Channel [@awesomeDIYgod](https://t.me/awesomeDIYgod)
+
+## Docker 部署
+
+### 安装
+
+运行下面的命令下载 RSSHub 镜像
+
+```bash
+$ docker pull diygod/rsshub
+```
+
+然后运行 RSSHub 即可
+
+```bash
+$ docker run -d -e "TZ=Asia/Shanghai" --name rsshub -p 1200:1200 diygod/rsshub
+```
+
+在浏览器中打开 [http://127.0.0.1:1200/](http://127.0.0.1:1200/), enjoy it! ✅
+
+您可以使用下面的命令来关闭 RSSHub
+
+```bash
+$ docker stop rsshub
+```
+
+### 更新
+
+删除旧容器
+
+```bash
+$ docker stop rsshub
+$ docker rm rsshub
+```
